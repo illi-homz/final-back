@@ -7,6 +7,7 @@ from .models import GroupQuestionsModel
 from .models import ResultModel
 from .models import TestModel
 from .models import QuestionInTestModel
+from .models import GroupInTestModel
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import MyUser
@@ -36,4 +37,8 @@ class TesttAdmin(admin.ModelAdmin):
 
 @admin.register(QuestionInTestModel)
 class QuestionInTestAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(GroupInTestModel)
+class GroupInTestModelAdmin(admin.ModelAdmin):
     pass

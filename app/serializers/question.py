@@ -10,7 +10,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = QuestionModel.objects.all()
     serializer_class = QuestionSerializer
-    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 def get_router_urls():

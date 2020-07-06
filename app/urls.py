@@ -2,7 +2,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from app.serializers import image, user, question, group_questions
-from app.serializers import question_in_test, test, results
+from app.serializers import question_in_test, test, results, group_in_test
 from . import views
 
 from rest_framework_simplejwt.views import (
@@ -17,6 +17,7 @@ urlpatterns = [
     path('users/', include(user.get_router_urls())),
     path('questions/', include(question.get_router_urls())),
     path('questions-in-tests/', include(question_in_test.get_router_urls())),
+    path('groups-in-tests/', include(group_in_test.get_router_urls())),
     path('group-questions/', include(group_questions.get_router_urls())),
     path('results/', include(results.get_router_urls())),
     path('tests/', include(test.get_router_urls())),

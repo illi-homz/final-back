@@ -10,7 +10,7 @@ class ImageSerializer(serializers.ModelSerializer):
 class ImagesViewSet(viewsets.ModelViewSet):
     queryset = ImageModel.objects.all()
     serializer_class = ImageSerializer
-    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 def get_router_urls():
