@@ -3,7 +3,7 @@ from django.db.models import ImageField
 
 
 class ImageModel(models.Model):
-    file = ImageField(upload_to='media/')
+    file = ImageField(upload_to='staticfiles/')
 
     def __str__(self):
         return self.file.name
