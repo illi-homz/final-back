@@ -1,6 +1,0 @@
-{
-  "name": "Testing server",
-  "description": "Testing server on Heroku",
-  "image": "heroku/python",
-  "keywords": ["python", "django" ]
-}
