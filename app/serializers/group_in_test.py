@@ -27,7 +27,7 @@ class GroupInTestSerializer(serializers.ModelSerializer):
 class GroupInTestViewSet(viewsets.ModelViewSet):
     queryset = GroupInTestModel.objects.all()
     serializer_class = GroupInTestSerializer
-    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         # self.user = request.user
