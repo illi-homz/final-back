@@ -43,13 +43,12 @@ class TestSerializer(serializers.ModelSerializer):
 class TestViewSet(viewsets.ModelViewSet):
     queryset = TestModel.objects.all()
     serializer_class = TestSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         queryset = super().get_queryset()
         if (self.request.query_params):
             userID = self.request.query_params['user']
-            print(userID)
             queryset = queryset.filter(tested_users__id=userID)
             return queryset
         return queryset

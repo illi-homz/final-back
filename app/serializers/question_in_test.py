@@ -27,7 +27,7 @@ class QuestionInTestSerializer(serializers.ModelSerializer):
 class QuestionInTestViewSet(viewsets.ModelViewSet):
     queryset = QuestionInTestModel.objects.all()
     serializer_class = QuestionInTestSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         listOfQuestionsIT = request.data
